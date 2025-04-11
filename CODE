@@ -7,3 +7,7 @@ b. Remove unnecessary columns like ProductID for less cluttering.
 a. In the Modeling tab, we go to New Measure and add the following ones:
 Total Sales = SUM(Sample - Superstore['Sales'])
 Total Profit = SUM('Sample - Superstore'[Profit])
+Sales Growth % = DIVIDE([Total Sales] - [Sales LY], [Sales LY])
+Profit LY = CALCULATE([Total Profit], SAMEPERIODLASTYEAR('Calendar'[Date]))
+Profit Growth % = DIVIDE([Total Profit] - [Profit LY], [Profit LY])
+
