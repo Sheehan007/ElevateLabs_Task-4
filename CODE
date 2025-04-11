@@ -1,1 +1,9 @@
+#1. Loading and Preping the Data 
+a. Go to the Power Query sub-section and make sure that Ship Date and Order Date are both date type. 
+b. Remove unnecessary columns like ProductID for less cluttering. 
 
+
+#2. Creating KPI measures
+a. In the Modeling tab, we go to New Measure and add the following ones:
+Total Sales = SUM(Sample - Superstore['Sales'])
+Total Profit = SUM('Sample - Superstore'[Profit])
